@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aulson Systems</title>
+  <meta name="description" content="Aulson Systems — Technology consulting and software solutions at the intersection of AI, automation, and business process. Based in Dallas, TX." />
+  <link rel="canonical" href="https://aulson.pro" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Aulson Systems" />
+  <meta property="og:description" content="Technology consulting and software at the intersection of AI, automation, and business process." />
+  <meta property="og:url" content="https://aulson.pro" />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50:  '#eef2ff',
+              100: '#e0e7ff',
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            },
+            surface: {
+              900: '#0a0a0f',
+              800: '#111118',
+              700: '#1a1a24',
+              600: '#22222f',
+              500: '#2e2e3e',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { background-color: #0a0a0f; }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .card-border {
+      border: 1px solid rgba(99, 102, 241, 0.15);
+      background: linear-gradient(135deg, rgba(26,26,36,0.8) 0%, rgba(17,17,24,0.9) 100%);
+      backdrop-filter: blur(8px);
+    }
+
+    .card-border:hover {
+      border-color: rgba(99, 102, 241, 0.4);
+      transition: border-color 0.2s ease;
+    }
+
+    .glow-dot {
+      width: 6px;
+      height: 6px;
+      background: #6366f1;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #6366f1;
+    }
+
+    .hero-grid {
+      background-image:
+        linear-gradient(rgba(99,102,241,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(99,102,241,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .nav-blur {
+      backdrop-filter: blur(12px);
+      background: rgba(10,10,15,0.85);
+      border-bottom: 1px solid rgba(99,102,241,0.1);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-up { animation: fadeUp 0.6s ease forwards; }
+    .delay-1 { animation-delay: 0.1s; opacity: 0; }
+    .delay-2 { animation-delay: 0.2s; opacity: 0; }
+    .delay-3 { animation-delay: 0.35s; opacity: 0; }
+    .delay-4 { animation-delay: 0.5s; opacity: 0; }
+  </style>
+</head>
+
+<body class="font-sans text-slate-300 antialiased">
+
+  <!-- NAV -->
+  <nav class="nav-blur fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="glow-dot group-hover:scale-125 transition-transform"></div>
+        <span class="font-semibold text-white tracking-tight">Aulson Systems</span>
+      </a>
+      <div class="hidden sm:flex items-center gap-8 text-sm text-slate-400">
+        <a href="#services" class="hover:text-white transition-colors">Services</a>
+        <a href="#approach" class="hover:text-white transition-colors">Approach</a>
+        <a href="#about" class="hover:text-white transition-colors">About</a>
+        <a href="#contact" class="ml-2 px-4 py-1.5 rounded-md bg-brand-600 hover:bg-brand-500 text-white text-sm font-medium transition-colors">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-grid relative min-h-screen flex items-center pt-16">
+    <!-- radial glow -->
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div class="w-[600px] h-[600px] rounded-full" style="background: radial-gradient(circle, rgba(99,102,241,0.08) 0%, transparent 70%);"></div>
+    </div>
+
+    <div class="relative max-w-6xl mx-auto px-6 py-24 md:py-32">
+      <div class="max-w-3xl">
+
+        <div class="fade-up delay-1 inline-flex items-center gap-2 text-xs font-mono text-brand-400 tracking-widest uppercase mb-6 px-3 py-1.5 rounded-full border border-brand-500/20 bg-brand-500/5">
+          <span class="glow-dot" style="width:5px;height:5px;"></span>
+          Dallas, TX · Technology Consulting & Software
+        </div>
+
+        <h1 class="fade-up delay-2 text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-6">
+          Systems built to<br />
+          <span class="gradient-text">scale with you.</span>
+        </h1>
+
+        <p class="fade-up delay-3 text-lg md:text-xl text-slate-400 leading-relaxed mb-10 max-w-xl">
+          Aulson Systems helps businesses move faster by building smarter — at the intersection of AI, automation, and strategic process design.
+        </p>
+
+        <div class="fade-up delay-4 flex flex-wrap gap-4">
+          <a href="#contact" class="px-6 py-3 rounded-lg bg-brand-600 hover:bg-brand-500 text-white font-medium transition-colors shadow-lg shadow-brand-600/20">
+            Start a conversation
+          </a>
+          <a href="#services" class="px-6 py-3 rounded-lg border border-slate-700 hover:border-slate-500 text-slate-300 hover:text-white font-medium transition-colors">
+            See what we do
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-24 md:py-32 max-w-6xl mx-auto px-6">
+
+    <div class="mb-16">
+      <p class="font-mono text-brand-400 text-sm tracking-widest uppercase mb-3">Services</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-white">How we work with you</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <!-- Card 1 -->
+      <div class="card-border rounded-xl p-7">
+        <div class="w-10 h-10 rounded-lg bg-brand-500/10 border border-brand-500/20 flex items-center justify-center mb-5">
+          <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15M14.25 3.104c.251.023.501.05.75.082M19.8 15l-1.8 1.8M5 14.5l-1.8 1.8M5 14.5V19m14.8-4l-3.3 3.3M19 19H5" />
+          </svg>
+        </div>
+        <h3 class="text-white font-semibold text-lg mb-2">AI & Automation Consulting</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          We help organizations identify where AI creates real leverage — then design the systems, workflows, and integrations to deliver it. Strategy through execution.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card-border rounded-xl p-7">
+        <div class="w-10 h-10 rounded-lg bg-brand-500/10 border border-brand-500/20 flex items-center justify-center mb-5">
+          <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" />
+          </svg>
+        </div>
+        <h3 class="text-white font-semibold text-lg mb-2">Software & App Development</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          From targeted internal tools to consumer-facing applications, we build software that solves real problems — clean architecture, practical scope, fast delivery.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card-border rounded-xl p-7">
+        <div class="w-10 h-10 rounded-lg bg-brand-500/10 border border-brand-500/20 flex items-center justify-center mb-5">
+          <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6.75v6.75" />
+          </svg>
+        </div>
+        <h3 class="text-white font-semibold text-lg mb-2">Process & Systems Design</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Technology only works if the process underneath it works. We map, redesign, and instrument business processes so that automation has something solid to stand on.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section id="approach" class="py-24 md:py-32 border-t border-slate-800/60">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="mb-16">
+        <p class="font-mono text-brand-400 text-sm tracking-widest uppercase mb-3">Approach</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white max-w-xl">Thoughtful systems. Deliberate execution.</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+
+        <div class="space-y-8">
+          <div class="flex gap-5">
+            <div class="mt-1 font-mono text-brand-400 text-sm font-medium w-6 shrink-0">01</div>
+            <div>
+              <h3 class="text-white font-semibold mb-1">Understand before building</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">We invest in understanding your actual problem before recommending any technology. The right tool for the wrong problem is still the wrong answer.</p>
+            </div>
+          </div>
+          <div class="flex gap-5">
+            <div class="mt-1 font-mono text-brand-400 text-sm font-medium w-6 shrink-0">02</div>
+            <div>
+              <h3 class="text-white font-semibold mb-1">Context is infrastructure</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">AI systems are only as good as the context they operate in. We treat knowledge architecture — how information is structured, retrieved, and passed to AI — as a first-class engineering concern.</p>
+            </div>
+          </div>
+          <div class="flex gap-5">
+            <div class="mt-1 font-mono text-brand-400 text-sm font-medium w-6 shrink-0">03</div>
+            <div>
+              <h3 class="text-white font-semibold mb-1">Ship, learn, iterate</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">We favor working systems over perfect specs. Momentum is valuable. We move fast, instrument everything, and refine based on what's real.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-border rounded-xl p-8 font-mono text-sm">
+          <div class="text-slate-500 mb-4 text-xs tracking-widest uppercase">System design principles</div>
+          <div class="space-y-3">
+            <div class="flex items-start gap-3">
+              <span class="text-brand-400 shrink-0">→</span>
+              <span class="text-slate-300">Structured knowledge over raw data</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-brand-400 shrink-0">→</span>
+              <span class="text-slate-300">Automation that handles edge cases gracefully</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-brand-400 shrink-0">→</span>
+              <span class="text-slate-300">AI augments people — it doesn't replace judgment</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-brand-400 shrink-0">→</span>
+              <span class="text-slate-300">Observable systems from day one</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-brand-400 shrink-0">→</span>
+              <span class="text-slate-300">Build for what you need today, shape for tomorrow</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-24 md:py-32 border-t border-slate-800/60">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+
+        <div>
+          <p class="font-mono text-brand-400 text-sm tracking-widest uppercase mb-3">About</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Founder-led. Technically deep.</h2>
+          <div class="space-y-4 text-slate-400 leading-relaxed">
+            <p>
+              Aulson Systems is led by Jonathan Aulson, a management consultant and technologist based in Dallas, TX with a track record of delivering strategic technology solutions for complex organizations.
+            </p>
+            <p>
+              Jonathan's work spans enterprise process transformation, custom software development, and applied AI — with a particular focus on the systems that make AI reliable: how knowledge is structured, surfaced, and delivered to agents and models at the right moment.
+            </p>
+            <p>
+              Aulson Systems is the platform for that expertise — available for consulting engagements and as a home for software products built under the same philosophy.
+            </p>
+          </div>
+          <div class="mt-8">
+            <a href="https://www.linkedin.com/in/jonaulson/" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 text-sm text-brand-400 hover:text-brand-300 transition-colors">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+              linkedin.com/in/jonaulson
+            </a>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="card-border rounded-xl p-6 col-span-2">
+            <div class="text-3xl font-bold text-white mb-1">Dallas, TX</div>
+            <div class="text-slate-500 text-sm">Headquarters</div>
+          </div>
+          <div class="card-border rounded-xl p-6">
+            <div class="text-3xl font-bold text-white mb-1">AI</div>
+            <div class="text-slate-500 text-sm">Core focus</div>
+          </div>
+          <div class="card-border rounded-xl p-6">
+            <div class="text-3xl font-bold text-white mb-1">End-to-end</div>
+            <div class="text-slate-500 text-sm">Capability</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-24 md:py-32 border-t border-slate-800/60">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="max-w-2xl mx-auto text-center">
+        <p class="font-mono text-brand-400 text-sm tracking-widest uppercase mb-3">Contact</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Let's talk about your project</h2>
+        <p class="text-slate-400 mb-10">Whether you're exploring a consulting engagement or have a specific project in mind, reach out and we'll figure out if there's a fit.</p>
+
+        <div class="card-border rounded-xl p-8 text-left space-y-5">
+
+          <div class="flex items-center gap-4">
+            <div class="w-9 h-9 rounded-lg bg-brand-500/10 border border-brand-500/20 flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+              </svg>
+            </div>
+            <div>
+              <div class="text-xs text-slate-500 uppercase tracking-wider font-mono mb-0.5">Email</div>
+              <a href="mailto:jonathan@aulson.pro" class="text-white hover:text-brand-300 transition-colors font-medium">jonathan@aulson.pro</a>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <div class="w-9 h-9 rounded-lg bg-brand-500/10 border border-brand-500/20 flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4 text-brand-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="text-xs text-slate-500 uppercase tracking-wider font-mono mb-0.5">LinkedIn</div>
+              <a href="https://www.linkedin.com/in/jonaulson/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-brand-300 transition-colors font-medium">linkedin.com/in/jonaulson</a>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <div class="w-9 h-9 rounded-lg bg-brand-500/10 border border-brand-500/20 flex items-center justify-center shrink-0">
+              <svg class="w-4 h-4 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+              </svg>
+            </div>
+            <div>
+              <div class="text-xs text-slate-500 uppercase tracking-wider font-mono mb-0.5">Location</div>
+              <span class="text-white font-medium">Dallas, Texas</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800/60 py-8">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-600">
+      <div class="flex items-center gap-2">
+        <div class="glow-dot" style="width:5px;height:5px;opacity:0.5;"></div>
+        <span>Aulson Systems</span>
+      </div>
+      <span>© 2026 Aulson Systems · Dallas, TX · <a href="https://aulson.pro" class="hover:text-slate-400 transition-colors">aulson.pro</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>
