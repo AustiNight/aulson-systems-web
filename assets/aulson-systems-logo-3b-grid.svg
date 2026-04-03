@@ -13,6 +13,6 @@
   </g>
 
   <!-- Wordmark -->
-  <text x="218" y="112" font-family="'Inter', 'IBM Plex Sans', system-ui, sans-serif" font-size="28" font-weight="500" fill="#f8fafc">Aulson</text>
-  <text x="220" y="132" font-family="'Inter', 'IBM Plex Sans', system-ui, sans-serif" font-size="11" font-weight="400" fill="#64748b" letter-spacing="2.5">SYSTEMS</text>
+  <text x="218" y="112" font-family="'Inter', 'IBM Plex Sans', system-ui, sans-serif" font-size="32" font-weight="500" fill="#f8fafc">Aulson</text>
+  <text x="220" y="136" font-family="'Inter', 'IBM Plex Sans', system-ui, sans-serif" font-size="14" font-weight="400" fill="#f8fafc" letter-spacing="2.5">SYSTEMS</text>
 </svg>
