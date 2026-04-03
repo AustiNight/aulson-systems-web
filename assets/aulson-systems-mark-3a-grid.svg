@@ -1,0 +1,45 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="120" rx="20" fill="#0f172a"/>
+  <!-- Grid -->
+  <g opacity="0.18" stroke="#4ade80" stroke-width="0.75" fill="none">
+    <line x1="15" y1="10" x2="15" y2="112"/>
+    <line x1="40" y1="10" x2="40" y2="112"/>
+    <line x1="60" y1="10" x2="60" y2="112"/>
+    <line x1="80" y1="10" x2="80" y2="112"/>
+    <line x1="105" y1="10" x2="105" y2="112"/>
+    <line x1="15" y1="10"  x2="105" y2="10"/>
+    <line x1="15" y1="36"  x2="105" y2="36"/>
+    <line x1="15" y1="61"  x2="105" y2="61"/>
+    <line x1="15" y1="86"  x2="105" y2="86"/>
+    <line x1="15" y1="112" x2="105" y2="112"/>
+  </g>
+  <!-- Ghost dots -->
+  <circle cx="15"  cy="36"  r="1.5" fill="#4ade80" opacity="0.2"/>
+  <circle cx="40"  cy="36"  r="1.5" fill="#4ade80" opacity="0.2"/>
+  <circle cx="80"  cy="36"  r="1.5" fill="#4ade80" opacity="0.2"/>
+  <circle cx="105" cy="36"  r="1.5" fill="#4ade80" opacity="0.2"/>
+  <circle cx="15"  cy="61"  r="1.5" fill="#4ade80" opacity="0.2"/>
+  <circle cx="40"  cy="61"  r="1.5" fill="#4ade80" opacity="0.2"/>
+  <circle cx="80"  cy="61"  r="1.5" fill="#4ade80" opacity="0.2"/>
+  <circle cx="105" cy="61"  r="1.5" fill="#4ade80" opacity="0.2"/>
+  <circle cx="15"  cy="86"  r="1.5" fill="#4ade80" opacity="0.2"/>
+  <circle cx="40"  cy="86"  r="1.5" fill="#4ade80" opacity="0.2"/>
+  <circle cx="60"  cy="86"  r="1.5" fill="#4ade80" opacity="0.2"/>
+  <circle cx="80"  cy="86"  r="1.5" fill="#4ade80" opacity="0.2"/>
+  <circle cx="105" cy="86"  r="1.5" fill="#4ade80" opacity="0.2"/>
+  <!-- A skeleton -->
+  <line x1="22"  y1="112" x2="60" y2="10"  stroke="#334155" stroke-width="1.5"/>
+  <line x1="98"  y1="112" x2="60" y2="10"  stroke="#334155" stroke-width="1.5"/>
+  <line x1="22"  y1="112" x2="98" y2="112" stroke="#334155" stroke-width="1.5"/>
+  <line x1="22"  y1="112" x2="37" y2="61"  stroke="#4ade80" stroke-width="1.5"/>
+  <line x1="98"  y1="112" x2="83" y2="61"  stroke="#4ade80" stroke-width="1.5"/>
+  <line x1="37"  y1="61"  x2="83" y2="61"  stroke="#4ade80" stroke-width="1.5"/>
+  <line x1="37"  y1="61"  x2="60" y2="10"  stroke="#334155" stroke-width="1.5"/>
+  <line x1="83"  y1="61"  x2="60" y2="10"  stroke="#334155" stroke-width="1.5"/>
+  <!-- Nodes -->
+  <circle cx="60" cy="10"  r="4.5" fill="#4ade80"/>
+  <circle cx="37" cy="61"  r="3.5" fill="#4ade80" opacity="0.85"/>
+  <circle cx="83" cy="61"  r="3.5" fill="#4ade80" opacity="0.85"/>
+  <circle cx="22" cy="112" r="3"   fill="#64748b"/>
+  <circle cx="98" cy="112" r="3"   fill="#64748b"/>
+</svg>
