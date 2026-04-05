@@ -33,12 +33,13 @@
           },
           colors: {
             brand: {
-              50:  '#eef2ff',
-              100: '#e0e7ff',
-              400: '#818cf8',
-              500: '#6366f1',
-              600: '#4f46e5',
-              700: '#4338ca',
+              50:  '#f0fff4',
+              100: '#ccffcc',
+              300: '#e5ff80',
+              400: '#c8ff00',
+              500: '#00ffbb',
+              600: '#00d4a0',
+              700: '#00a87e',
             },
             surface: {
               900: '#0a0a0f',
@@ -57,42 +58,42 @@
     body { background-color: #0a0a0f; }
 
     .gradient-text {
-      background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+      background: linear-gradient(135deg, #c8ff00 0%, #00ffbb 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
     .card-border {
-      border: 1px solid rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(0, 212, 160, 0.15);
       background: linear-gradient(135deg, rgba(26,26,36,0.8) 0%, rgba(17,17,24,0.9) 100%);
       backdrop-filter: blur(8px);
     }
 
     .card-border:hover {
-      border-color: rgba(99, 102, 241, 0.4);
+      border-color: rgba(0, 212, 160, 0.4);
       transition: border-color 0.2s ease;
     }
 
     .glow-dot {
       width: 6px;
       height: 6px;
-      background: #6366f1;
+      background: #c8ff00;
       border-radius: 50%;
-      box-shadow: 0 0 8px #6366f1;
+      box-shadow: 0 0 8px #c8ff00;
     }
 
     .hero-grid {
       background-image:
-        linear-gradient(rgba(99,102,241,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(99,102,241,0.04) 1px, transparent 1px);
+        linear-gradient(rgba(200,255,0,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200,255,0,0.04) 1px, transparent 1px);
       background-size: 60px 60px;
     }
 
     .nav-blur {
       backdrop-filter: blur(12px);
       background: rgba(10,10,15,0.85);
-      border-bottom: 1px solid rgba(99,102,241,0.1);
+      border-bottom: 1px solid rgba(0,212,160,0.1);
     }
 
     @keyframes fadeUp {
@@ -129,7 +130,7 @@
   <section class="hero-grid relative min-h-screen flex items-center pt-16">
     <!-- radial glow -->
     <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-      <div class="w-[600px] h-[600px] rounded-full" style="background: radial-gradient(circle, rgba(99,102,241,0.08) 0%, transparent 70%);"></div>
+      <div class="w-[600px] h-[600px] rounded-full" style="background: radial-gradient(circle, rgba(200,255,0,0.07) 0%, rgba(0,255,187,0.04) 50%, transparent 70%);"></div>
     </div>
 
     <div class="relative max-w-6xl mx-auto px-6 py-24 md:py-32">
