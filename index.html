@@ -251,187 +251,10 @@
       <!-- Portfolio -->
       <div id="products-head" class="mb-10 border-t border-slate-800/60 pt-16">
         <p class="font-mono text-brand-400 text-sm tracking-widest uppercase mb-3">Portfolio</p>
-        <h2 class="text-3xl md:text-4xl font-bold text-white">Every live product.</h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-white">A few recent projects.</h2>
       </div>
 
-      <div class="space-y-5" id="products-list">
-
-        <!-- E.G.G.S. -->
-        <div class="product-card card-border rounded-xl overflow-hidden">
-          <div class="grid md:grid-cols-[2fr_3fr]">
-            <div class="product-screenshot">
-              <img src="/assets/screenshots/eggs.jpeg" alt="E.G.G.S." />
-            </div>
-            <div class="p-7 space-y-5 border-t border-slate-800/50 md:border-t-0 md:border-l md:border-slate-800/50">
-              <div class="flex items-center gap-3 flex-wrap">
-                <h3 class="text-xl font-bold text-white">E.G.G.S.</h3>
-                <span class="text-xs font-mono px-2 py-0.5 rounded-full" style="background:rgba(74,222,128,0.08);color:#4ade80;border:1px solid rgba(74,222,128,0.2);">Live</span>
-              </div>
-              <p class="text-slate-300 text-sm leading-relaxed">AI grocery planning for private event chefs. Enter a menu and headcount; receive a multi-store shopping plan with real Kroger SKU prices, cost estimates per event, and a three-tier confidence model on every line item.</p>
-              <div>
-                <div class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-2.5">Stack</div>
-                <div class="flex flex-wrap gap-1.5">
-                  <span class="stack-pill">React + Vite</span>
-                  <span class="stack-pill">Hono / CF Workers</span>
-                  <span class="stack-pill">Kroger API</span>
-                  <span class="stack-pill">Claude Haiku</span>
-                  <span class="stack-pill">Supabase Postgres</span>
-                  <span class="stack-pill">Clerk Auth</span>
-                  <span class="stack-pill">Stripe</span>
-                </div>
-              </div>
-              <div>
-                <div class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-2.5">Rationale</div>
-                <ul class="space-y-2">
-                  <li class="flex gap-2 text-xs text-slate-400"><span class="text-brand-400 shrink-0">→</span><span>Cloudflare Workers: zero cold-start cost at low traffic — no idle server charges while revenue ramps.</span></li>
-                  <li class="flex gap-2 text-xs text-slate-400"><span class="text-brand-400 shrink-0">→</span><span>Kroger API over scrapers: real SKU prices are the product's core value proposition — estimated prices destroy trust.</span></li>
-                  <li class="flex gap-2 text-xs text-slate-400"><span class="text-brand-400 shrink-0">→</span><span>Claude Haiku over Sonnet: grocery lookups need speed and volume tolerance, not reasoning depth — 5× cheaper per call.</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- QueryGenie -->
-        <div class="product-card card-border rounded-xl overflow-hidden">
-          <div class="grid md:grid-cols-[2fr_3fr]">
-            <div class="product-screenshot">
-              <img src="/assets/screenshots/querygenie.jpeg" alt="QueryGenie" />
-            </div>
-            <div class="p-7 space-y-5 border-t border-slate-800/50 md:border-t-0 md:border-l md:border-slate-800/50">
-              <div class="flex items-center gap-3 flex-wrap">
-                <h3 class="text-xl font-bold text-white">QueryGenie</h3>
-                <span class="text-xs font-mono px-2 py-0.5 rounded-full" style="background:rgba(74,222,128,0.08);color:#4ade80;border:1px solid rgba(74,222,128,0.2);">Live</span>
-              </div>
-              <p class="text-slate-300 text-sm leading-relaxed">Natural language to SQL across 6 dialects — T-SQL, PostgreSQL, MySQL, SQLite, BigQuery, Snowflake — with voice input. Mobile-first, PWA-based. All processing happens in-browser; no server required.</p>
-              <div>
-                <div class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-2.5">Stack</div>
-                <div class="flex flex-wrap gap-1.5">
-                  <span class="stack-pill">React (single-file)</span>
-                  <span class="stack-pill">sql.js / WASM</span>
-                  <span class="stack-pill">Claude API (BYOK)</span>
-                  <span class="stack-pill">Cloudflare Pages</span>
-                  <span class="stack-pill">PWA / Mobile</span>
-                </div>
-              </div>
-              <div>
-                <div class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-2.5">Rationale</div>
-                <ul class="space-y-2">
-                  <li class="flex gap-2 text-xs text-slate-400"><span class="text-brand-400 shrink-0">→</span><span>BYOK model: user supplies their own Claude API key — zero AI operating cost, zero billing risk at launch.</span></li>
-                  <li class="flex gap-2 text-xs text-slate-400"><span class="text-brand-400 shrink-0">→</span><span>sql.js / WASM: SQLite runs fully client-side — no server needed, queries stay private by architecture.</span></li>
-                  <li class="flex gap-2 text-xs text-slate-400"><span class="text-brand-400 shrink-0">→</span><span>PWA architecture: installable on mobile with zero native development cost — app-like experience from the browser.</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- mDash -->
-        <div class="product-card card-border rounded-xl overflow-hidden">
-          <div class="grid md:grid-cols-[2fr_3fr]">
-            <div class="product-screenshot">
-              <img src="/assets/screenshots/mdash.jpeg" alt="mDash" />
-            </div>
-            <div class="p-7 space-y-5 border-t border-slate-800/50 md:border-t-0 md:border-l md:border-slate-800/50">
-              <div class="flex items-center gap-3 flex-wrap">
-                <h3 class="text-xl font-bold text-white">mDash</h3>
-                <span class="text-xs font-mono px-2 py-0.5 rounded-full" style="background:rgba(74,222,128,0.08);color:#4ade80;border:1px solid rgba(74,222,128,0.2);">Live</span>
-              </div>
-              <p class="text-slate-300 text-sm leading-relaxed">Universal document format converter — PDF, DOCX, Excel, HTML, CSV in; linter-perfect Markdown out, and back again. Bidirectional. Entirely client-side: no uploads, no server, nothing leaves the browser. Every output passes markdownlint with zero warnings.</p>
-              <div>
-                <div class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-2.5">Stack</div>
-                <div class="flex flex-wrap gap-1.5">
-                  <span class="stack-pill">React + Vite</span>
-                  <span class="stack-pill">unified / remark</span>
-                  <span class="stack-pill">CodeMirror 6</span>
-                  <span class="stack-pill">Mammoth.js / pdf.js</span>
-                  <span class="stack-pill">SheetJS</span>
-                  <span class="stack-pill">docx-js</span>
-                  <span class="stack-pill">Cloudflare Pages</span>
-                </div>
-              </div>
-              <div>
-                <div class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-2.5">Rationale</div>
-                <ul class="space-y-2">
-                  <li class="flex gap-2 text-xs text-slate-400"><span class="text-brand-400 shrink-0">→</span><span>100% client-side processing: zero server cost, zero privacy exposure — a genuine selling point in enterprise markets.</span></li>
-                  <li class="flex gap-2 text-xs text-slate-400"><span class="text-brand-400 shrink-0">→</span><span>unified / remark pipeline: the only way to guarantee markdownlint-clean AST output, not string-based conversion.</span></li>
-                  <li class="flex gap-2 text-xs text-slate-400"><span class="text-brand-400 shrink-0">→</span><span>CodeMirror 6: production-grade editor with live syntax highlighting — critical for the bidirectional edit experience.</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Xtract -->
-        <div class="product-card card-border rounded-xl overflow-hidden">
-          <div class="grid md:grid-cols-[2fr_3fr]">
-            <div class="product-screenshot">
-              <img src="/assets/screenshots/xtract.jpeg" alt="Xtract" />
-            </div>
-            <div class="p-7 space-y-5 border-t border-slate-800/50 md:border-t-0 md:border-l md:border-slate-800/50">
-              <div class="flex items-center gap-3 flex-wrap">
-                <h3 class="text-xl font-bold text-white">Xtract</h3>
-                <span class="text-xs font-mono px-2 py-0.5 rounded-full" style="background:rgba(74,222,128,0.08);color:#4ade80;border:1px solid rgba(74,222,128,0.2);">Live</span>
-              </div>
-              <p class="text-slate-300 text-sm leading-relaxed">AI structured data extraction micro-tool. Define a schema of named fields, feed in any natural language document, receive clean JSON with per-field confidence scoring — CONFIRMED through ABSENT — and configurable threshold presets.</p>
-              <div>
-                <div class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-2.5">Stack</div>
-                <div class="flex flex-wrap gap-1.5">
-                  <span class="stack-pill">Next.js 14 App Router</span>
-                  <span class="stack-pill">Cloudflare Worker (TS)</span>
-                  <span class="stack-pill">Claude Haiku</span>
-                  <span class="stack-pill">Cloudflare KV</span>
-                  <span class="stack-pill">Resend</span>
-                </div>
-              </div>
-              <div>
-                <div class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-2.5">Rationale</div>
-                <ul class="space-y-2">
-                  <li class="flex gap-2 text-xs text-slate-400"><span class="text-brand-400 shrink-0">→</span><span>Cloudflare Worker for the API: globally distributed, zero cold start, no persistent server cost at low volume.</span></li>
-                  <li class="flex gap-2 text-xs text-slate-400"><span class="text-brand-400 shrink-0">→</span><span>Dual sliding-window rate limiting via KV: serverless rate limiting without a database or Redis instance.</span></li>
-                  <li class="flex gap-2 text-xs text-slate-400"><span class="text-brand-400 shrink-0">→</span><span>Haiku for extraction: structured JSON is deterministic schema-following — throughput and cost matter more than reasoning.</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Helm -->
-        <div class="product-card card-border rounded-xl overflow-hidden">
-          <div class="grid md:grid-cols-[2fr_3fr]">
-            <div class="product-screenshot">
-              <img src="/assets/screenshots/helm.jpeg" alt="Helm" />
-            </div>
-            <div class="p-7 space-y-5 border-t border-slate-800/50 md:border-t-0 md:border-l md:border-slate-800/50">
-              <div class="flex items-center gap-3 flex-wrap">
-                <h3 class="text-xl font-bold text-white">Helm</h3>
-                <span class="text-xs font-mono px-2 py-0.5 rounded-full" style="background:rgba(74,222,128,0.08);color:#4ade80;border:1px solid rgba(74,222,128,0.2);">Live</span>
-              </div>
-              <p class="text-slate-300 text-sm leading-relaxed">Multi-provider AI command center built natively for a Samsung Galaxy Tab S8 Ultra. Routes queries intelligently across OpenAI, Claude, and local Ollama with prompt compression, semantic caching, RAG retrieval, and real-time execution pipeline visualization.</p>
-              <div>
-                <div class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-2.5">Stack</div>
-                <div class="flex flex-wrap gap-1.5">
-                  <span class="stack-pill">FastAPI + Python</span>
-                  <span class="stack-pill">React + Tailwind</span>
-                  <span class="stack-pill">MongoDB</span>
-                  <span class="stack-pill">OpenAI / Anthropic / Ollama</span>
-                  <span class="stack-pill">Whisper (voice)</span>
-                  <span class="stack-pill">Railway + Vercel</span>
-                </div>
-              </div>
-              <div>
-                <div class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-2.5">Rationale</div>
-                <ul class="space-y-2">
-                  <li class="flex gap-2 text-xs text-slate-400"><span class="text-brand-400 shrink-0">→</span><span>FastAPI + persistent backend: WebSocket streaming and ambient listening require a live server — serverless architecture doesn't apply here.</span></li>
-                  <li class="flex gap-2 text-xs text-slate-400"><span class="text-brand-400 shrink-0">→</span><span>MongoDB: chat history is variable-shape document data — flexible schema matches better than relational tables.</span></li>
-                  <li class="flex gap-2 text-xs text-slate-400"><span class="text-brand-400 shrink-0">→</span><span>Multi-provider routing: redundancy + capability selection — tasks route to OpenAI, Claude, or local Ollama based on cost and context requirements.</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
+      <div class="space-y-5" id="products-list"></div>
     </div>
   </section>
 
@@ -618,6 +441,187 @@
   </footer>
 
   <script>
+    // ── Project pool ───────────────────────────────────────────────
+    const ALL_PROJECTS = [
+      {
+        id: 'eggs',
+        name: 'E.G.G.S.',
+        status: 'Live',
+        screenshot: '/assets/screenshots/eggs.jpeg',
+        description: 'AI grocery planning for private event chefs. Enter a menu and headcount; receive a multi-store shopping plan with real Kroger SKU prices, cost estimates per event, and a three-tier confidence model on every line item.',
+        stack: ['React + Vite', 'Hono / CF Workers', 'Kroger API', 'Claude Haiku', 'Supabase Postgres', 'Clerk Auth', 'Stripe'],
+        rationale: [
+          'Cloudflare Workers: zero cold-start cost at low traffic — no idle server charges while revenue ramps.',
+          "Kroger API over scrapers: real SKU prices are the product's core value proposition — estimated prices destroy trust.",
+          'Claude Haiku over Sonnet: grocery lookups need speed and volume tolerance, not reasoning depth — 5× cheaper per call.'
+        ]
+      },
+      {
+        id: 'querygenie',
+        name: 'QueryGenie',
+        status: 'Live',
+        screenshot: '/assets/screenshots/querygenie.jpeg',
+        description: 'Natural language to SQL across 6 dialects — T-SQL, PostgreSQL, MySQL, SQLite, BigQuery, Snowflake — with voice input. Mobile-first, PWA-based. All processing happens in-browser; no server required.',
+        stack: ['React (single-file)', 'sql.js / WASM', 'Claude API (BYOK)', 'Cloudflare Pages', 'PWA / Mobile'],
+        rationale: [
+          'BYOK model: user supplies their own Claude API key — zero AI operating cost, zero billing risk at launch.',
+          'sql.js / WASM: SQLite runs fully client-side — no server needed, queries stay private by architecture.',
+          'PWA architecture: installable on mobile with zero native development cost — app-like experience from the browser.'
+        ]
+      },
+      {
+        id: 'mdash',
+        name: 'mDash',
+        status: 'Live',
+        screenshot: '/assets/screenshots/mdash.jpeg',
+        description: 'Universal document format converter — PDF, DOCX, Excel, HTML, CSV in; linter-perfect Markdown out, and back again. Bidirectional. Entirely client-side: no uploads, no server, nothing leaves the browser. Every output passes markdownlint with zero warnings.',
+        stack: ['React + Vite', 'unified / remark', 'CodeMirror 6', 'Mammoth.js / pdf.js', 'SheetJS', 'docx-js', 'Cloudflare Pages'],
+        rationale: [
+          '100% client-side processing: zero server cost, zero privacy exposure — a genuine selling point in enterprise markets.',
+          'unified / remark pipeline: the only way to guarantee markdownlint-clean AST output, not string-based conversion.',
+          'CodeMirror 6: production-grade editor with live syntax highlighting — critical for the bidirectional edit experience.'
+        ]
+      },
+      {
+        id: 'xtract',
+        name: 'Xtract',
+        status: 'Live',
+        screenshot: '/assets/screenshots/xtract.jpeg',
+        description: 'AI structured data extraction micro-tool. Define a schema of named fields, feed in any natural language document, receive clean JSON with per-field confidence scoring — CONFIRMED through ABSENT — and configurable threshold presets.',
+        stack: ['Next.js 14 App Router', 'Cloudflare Worker (TS)', 'Claude Haiku', 'Cloudflare KV', 'Resend'],
+        rationale: [
+          'Cloudflare Worker for the API: globally distributed, zero cold start, no persistent server cost at low volume.',
+          'Dual sliding-window rate limiting via KV: serverless rate limiting without a database or Redis instance.',
+          'Haiku for extraction: structured JSON is deterministic schema-following — throughput and cost matter more than reasoning.'
+        ]
+      },
+      {
+        id: 'helm',
+        name: 'Helm',
+        status: 'Live',
+        screenshot: null,
+        description: 'Multi-provider AI command center built natively for a Samsung Galaxy Tab S8 Ultra. Routes queries intelligently across OpenAI, Claude, and local Ollama with prompt compression, semantic caching, RAG retrieval, and real-time execution pipeline visualization.',
+        stack: ['FastAPI + Python', 'React + Tailwind', 'MongoDB', 'OpenAI / Anthropic / Ollama', 'Whisper (voice)', 'Railway + Vercel'],
+        rationale: [
+          'FastAPI + persistent backend: WebSocket streaming and ambient listening require a live server — serverless architecture doesn\'t apply here.',
+          'MongoDB: chat history is variable-shape document data — flexible schema matches better than relational tables.',
+          'Multi-provider routing: redundancy + capability selection — tasks route to OpenAI, Claude, or local Ollama based on cost and context requirements.'
+        ]
+      },
+      {
+        id: 'tapestry',
+        name: 'Tapestry',
+        status: 'Beta',
+        screenshot: '/assets/screenshots/tapestry.jpeg',
+        description: 'Low-code workflow automation platform for SMBs — a self-hosted alternative to Zapier and Make. Build automated workflows by connecting composable action nodes in a visual canvas editor, with manual, webhook, and cron triggers.',
+        stack: ['Bun + Hono', 'React + Vite', 'shadcn/ui', 'Prisma + Cloudflare D1', 'Cloudflare Workers'],
+        rationale: [
+          'Cloudflare Workers + D1: serverless at the edge with a relational database — zero infrastructure to manage at launch.',
+          'Bun runtime: significantly faster than Node for the hot path of workflow execution where latency compounds.',
+          'DAG execution engine: strict dependency graph prevents circular workflows and enables safe parallel step execution.'
+        ]
+      },
+      {
+        id: 'deepsearches',
+        name: 'DeepSearches',
+        status: 'Live',
+        url: 'https://deepsearches.app',
+        screenshot: '/assets/screenshots/deepsearches.jpeg',
+        description: 'Fully transparent, agentic AI research assistant. An Overseer AI orchestrates specialized sub-agents to exhaustively discover and synthesize information from multiple sources — with every reasoning step visible in real time.',
+        stack: ['React + Vite', 'Cloudflare Workers', 'Cloudflare KV', 'OpenAI', 'Google Gemini'],
+        rationale: [
+          'Overseer architecture: a coordinator agent that spawns and manages sub-agents produces more thorough research than a single model pass.',
+          'Cloudflare Workers proxy: keeps API keys server-side, enabling safe household and team sharing via access allowlist.',
+          'Full reasoning transparency: showing every sub-agent decision is the differentiator — users trust results they can verify.'
+        ]
+      },
+      {
+        id: 'protostudio',
+        name: 'protoStudio',
+        status: 'Live',
+        url: 'https://prontoproto.studio',
+        screenshot: '/assets/screenshots/protostudio.jpeg',
+        description: 'AI-powered static HTML site builder for non-technical users. Describe your business in plain language; protoStudio generates a polished, production-ready website and refines it through conversation — no code required.',
+        stack: ['React + Vite', 'Tailwind 4.0', 'Hono / CF Workers', 'Supabase Auth', 'Claude / OpenAI / Gemini', 'Cloudflare Pages'],
+        rationale: [
+          'Patch-protocol loop: surgical section-anchor updates instead of full regeneration — dramatically faster iteration on real sites.',
+          'Multi-provider LLM: abstraction layer lets users bring their own API key for any major model — zero AI cost for the platform.',
+          '7-archetype taste system: CSS personality presets give non-technical users aesthetic vocabulary without design decisions.'
+        ]
+      },
+      {
+        id: 'scriptstories',
+        name: 'ScriptStories',
+        status: 'Beta',
+        url: 'https://scriptstories.app',
+        screenshot: '/assets/screenshots/scriptstories.jpeg',
+        description: 'Voice-driven Requirements Engineering environment for Azure DevOps. Speak requirements naturally; ScriptStories organizes them into Epics, Features, User Stories, Tasks, and Bugs — powered by Gemini Multimodal Live API.',
+        stack: ['React 19 + Vite', 'Cloudflare Workers', 'Google Gemini Live', 'OpenAI / Anthropic', 'Azure DevOps API'],
+        rationale: [
+          'Gemini Multimodal Live API: real-time audio streaming with intent classification — requirements captured as they\'re spoken, not after.',
+          'Spatial backlog view: card-focused interface for organizing items rather than a flat list — designed for the voice-first workflow.',
+          'Multi-provider writers: swap the underlying model without changing the UX — Gemini, OpenAI, and Anthropic all supported.'
+        ]
+      }
+    ];
+
+    function shuffle(arr) {
+      const a = arr.slice();
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+      return a;
+    }
+
+    function buildCard(p) {
+      const screenshotHtml = p.screenshot
+        ? `<img src="${p.screenshot}" alt="${p.name}" />`
+        : `<div style="width:100%;height:100%;min-height:220px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#111118 0%,#1a1a24 100%);"><span style="font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:#334155;letter-spacing:0.1em;">screenshot pending</span></div>`;
+
+      const urlHtml = p.url
+        ? `<a href="${p.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-mono text-slate-500 hover:text-brand-400 transition-colors">${p.url.replace(/^https?:\/\//, '')} ↗</a>`
+        : '';
+
+      const stackHtml = p.stack.map(s => `<span class="stack-pill">${s}</span>`).join('');
+
+      const rationaleHtml = p.rationale.map(r =>
+        `<li class="flex gap-2 text-xs text-slate-400"><span class="text-brand-400 shrink-0">→</span><span>${r}</span></li>`
+      ).join('');
+
+      const el = document.createElement('div');
+      el.className = 'product-card card-border rounded-xl overflow-hidden';
+      el.innerHTML = `
+        <div class="grid md:grid-cols-[2fr_3fr]">
+          <div class="product-screenshot">${screenshotHtml}</div>
+          <div class="p-7 space-y-5 border-t border-slate-800/50 md:border-t-0 md:border-l md:border-slate-800/50">
+            <div>
+              <div class="flex items-center gap-3 flex-wrap mb-1">
+                <h3 class="text-xl font-bold text-white">${p.name}</h3>
+                <span class="text-xs font-mono px-2 py-0.5 rounded-full" style="background:rgba(74,222,128,0.08);color:#4ade80;border:1px solid rgba(74,222,128,0.2);">${p.status}</span>
+              </div>
+              ${urlHtml}
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed">${p.description}</p>
+            <div>
+              <div class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-2.5">Stack</div>
+              <div class="flex flex-wrap gap-1.5">${stackHtml}</div>
+            </div>
+            <div>
+              <div class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-2.5">Rationale</div>
+              <ul class="space-y-2">${rationaleHtml}</ul>
+            </div>
+          </div>
+        </div>`;
+      return el;
+    }
+
+    (function renderProjects() {
+      const list = document.getElementById('products-list');
+      const picks = shuffle(ALL_PROJECTS).slice(0, 3);
+      picks.forEach(p => list.appendChild(buildCard(p)));
+    })();
+
     // ── Moon phase ─────────────────────────────────────────────────
     function getMoonFraction() {
       const known = new Date('2000-01-06T18:14:00Z');
