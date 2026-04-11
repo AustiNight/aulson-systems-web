@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mockup A — Monumental Scale</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root { --brand: #4ade80; }
+    body { background: #0a0a0f; }
+
+    /* Noise grain overlay */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9000;
+      opacity: 0.038;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 200px 200px;
+    }
+
+    .nav-blur {
+      backdrop-filter: blur(12px);
+      background: rgba(10,10,15,0.85);
+      border-bottom: 1px solid rgba(74,222,128,0.08);
+    }
+
+    .hero-grid {
+      background-image:
+        linear-gradient(rgba(74,222,128,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(74,222,128,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .glow-dot {
+      display: inline-block;
+      width: 5px; height: 5px;
+      background: var(--brand);
+      border-radius: 50%;
+      box-shadow: 0 0 6px var(--brand);
+      flex-shrink: 0;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--brand);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      border: 1px solid rgba(74,222,128,0.2);
+      background: rgba(74,222,128,0.04);
+    }
+
+    .card-border {
+      border: 1px solid rgba(74,222,128,0.1);
+      background: linear-gradient(135deg, rgba(26,26,36,0.8) 0%, rgba(17,17,24,0.9) 100%);
+    }
+
+    .section-rule {
+      border-top: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .option-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      color: rgba(74,222,128,0.4);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    /* Mockup label */
+    .mockup-tag {
+      position: fixed;
+      top: 0; right: 0;
+      z-index: 9999;
+      padding: 5px 14px;
+      background: rgba(74,222,128,0.12);
+      border-bottom-left-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: var(--brand);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      color: rgba(255,255,255,0.15);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    /* Focus section editorial numbers */
+    .focus-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--brand);
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+
+    .focus-row {
+      padding: 2rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 2rem;
+      align-items: baseline;
+    }
+    .focus-row:last-child { border-bottom: none; }
+  </style>
+</head>
+
+<body class="font-sans text-slate-300 antialiased">
+  <div class="mockup-tag">Mockup A — Monumental</div>
+
+  <!-- NAV -->
+  <nav class="nav-blur fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center">
+        <img src="/assets/aulson-systems-logo-3b-grid.svg" alt="Aulson Systems" class="h-10 w-auto" />
+      </a>
+      <div class="flex items-center gap-6">
+        <div class="hidden sm:flex items-center gap-8 text-sm text-slate-400">
+          <a href="#" class="hover:text-white transition-colors">Focus</a>
+          <a href="#" class="hover:text-white transition-colors">Perspective</a>
+          <a href="#" class="hover:text-white transition-colors">About</a>
+        </div>
+        <div class="flex items-center gap-2.5 pl-5 border-l border-slate-800">
+          <canvas id="moonCanvas" width="18" height="18"></canvas>
+          <span id="moonPhase" class="font-mono text-xs text-slate-600"></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ─── OPTION A1 ─── -->
+  <section class="hero-grid relative min-h-screen flex items-center pt-16 option-section">
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div class="w-[700px] h-[700px] rounded-full" style="background:radial-gradient(circle, rgba(74,222,128,0.05) 0%, transparent 65%);"></div>
+    </div>
+    <div class="relative max-w-6xl mx-auto px-6 py-24 w-full">
+      <div class="hero-content max-w-4xl">
+        <span class="badge mb-8 inline-flex"><span class="glow-dot"></span>Dallas, TX · Software & Intelligent Systems</span>
+        <div class="option-tag">Option A1</div>
+        <h1 class="hero-h1 text-white font-bold leading-[1.05] mb-6"
+            style="font-size:clamp(3.8rem,8vw,6.8rem);letter-spacing:-0.03em;">
+          Software that<br/>earns its keep.
+        </h1>
+        <p class="hero-sub text-slate-400 text-lg leading-relaxed max-w-md mb-10">
+          Aulson Systems builds software at the intersection of AI and real-world utility. Based in Dallas.
+        </p>
+        <a href="#" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md text-sm font-semibold transition-opacity hover:opacity-80"
+           style="background:var(--brand);color:#0a0a0f;">
+          Get in touch
+        </a>
+      </div>
+    </div>
+    <div class="scroll-hint">scroll for more options ↓</div>
+  </section>
+
+  <!-- ─── OPTION A2 ─── -->
+  <section class="section-rule relative min-h-screen flex items-center option-section">
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div class="w-[700px] h-[700px] rounded-full" style="background:radial-gradient(circle, rgba(74,222,128,0.04) 0%, transparent 65%);"></div>
+    </div>
+    <div class="relative max-w-6xl mx-auto px-6 py-24 w-full">
+      <div class="hero-content max-w-4xl">
+        <span class="badge mb-8 inline-flex"><span class="glow-dot"></span>Dallas, TX · Software & Intelligent Systems</span>
+        <div class="option-tag">Option A2</div>
+        <h1 class="hero-h1 text-white font-bold leading-[1.05] mb-6"
+            style="font-size:clamp(3.8rem,8vw,6.8rem);letter-spacing:-0.03em;">
+          The details<br/>are the work.
+        </h1>
+        <p class="hero-sub text-slate-400 text-lg leading-relaxed max-w-md mb-10">
+          Aulson Systems builds software at the intersection of AI and real-world utility. Based in Dallas.
+        </p>
+        <a href="#" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md text-sm font-semibold transition-opacity hover:opacity-80"
+           style="background:var(--brand);color:#0a0a0f;">
+          Get in touch
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── OPTION A3 ─── -->
+  <section class="section-rule relative min-h-screen flex items-center option-section">
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div class="w-[700px] h-[700px] rounded-full" style="background:radial-gradient(circle, rgba(74,222,128,0.04) 0%, transparent 65%);"></div>
+    </div>
+    <div class="relative max-w-6xl mx-auto px-6 py-24 w-full">
+      <div class="hero-content max-w-4xl">
+        <span class="badge mb-8 inline-flex"><span class="glow-dot"></span>Dallas, TX · Software & Intelligent Systems</span>
+        <div class="option-tag">Option A3</div>
+        <h1 class="hero-h1 text-white font-bold leading-[1.05] mb-6"
+            style="font-size:clamp(3.8rem,8vw,6.8rem);letter-spacing:-0.03em;">
+          Built right,<br/>or not at all.
+        </h1>
+        <p class="hero-sub text-slate-400 text-lg leading-relaxed max-w-md mb-10">
+          Aulson Systems builds software at the intersection of AI and real-world utility. Based in Dallas.
+        </p>
+        <a href="#" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md text-sm font-semibold transition-opacity hover:opacity-80"
+           style="background:var(--brand);color:#0a0a0f;">
+          Get in touch
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOCUS (editorial numbers) ─── -->
+  <section class="section-rule py-24 md:py-32">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="mb-14 focus-section-head">
+        <p class="font-mono text-xs tracking-widest uppercase mb-3" style="color:var(--brand);">Focus</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white">What drives the work</h2>
+      </div>
+      <div class="focus-items">
+        <div class="focus-row">
+          <div class="focus-num">01</div>
+          <div>
+            <h3 class="text-white font-semibold text-lg mb-1">Intelligent Systems</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">AI is only as good as what it knows. The real work is designing the knowledge architecture underneath.</p>
+          </div>
+        </div>
+        <div class="focus-row">
+          <div class="focus-num">02</div>
+          <div>
+            <h3 class="text-white font-semibold text-lg mb-1">Software Projects</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Software built for specific problems. No feature bloat, no scope creep. Useful or it does not ship.</p>
+          </div>
+        </div>
+        <div class="focus-row">
+          <div class="focus-num">03</div>
+          <div>
+            <h3 class="text-white font-semibold text-lg mb-1">Systems Thinking</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Bad systems compound. Good ones do too. The difference is whether anyone thought hard about the design before the first line of code.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER NOTE -->
+  <footer class="border-t py-8" style="border-color:rgba(255,255,255,0.04);">
+    <div class="max-w-6xl mx-auto px-6 flex items-center justify-between text-xs font-mono text-slate-700">
+      <div class="flex items-center gap-2">
+        <span class="glow-dot" style="opacity:0.4;"></span>
+        Aulson Systems
+      </div>
+      <span>Treatment A · Monumental Scale · single accent #4ade80</span>
+    </div>
+  </footer>
+
+  <script>
+    // ── Moon phase ──────────────────────────────────────────────
+    function getMoonFraction() {
+      const known = new Date('2000-01-06T18:14:00Z');
+      const cycle = 29.530588853;
+      const days = (Date.now() - known.getTime()) / 86400000;
+      return ((days % cycle) + cycle) % cycle / cycle;
+    }
+
+    function moonName(f) {
+      const d = f * 29.53;
+      if (d < 1.85 || d > 27.68) return 'New';
+      if (d < 5.54)  return 'Wax Crescent';
+      if (d < 9.22)  return 'First Qtr';
+      if (d < 12.91) return 'Wax Gibbous';
+      if (d < 16.61) return 'Full';
+      if (d < 20.30) return 'Wan Gibbous';
+      if (d < 23.99) return 'Last Qtr';
+      return 'Wan Crescent';
+    }
+
+    function drawMoon(canvas, f) {
+      const ctx = canvas.getContext('2d');
+      const r = 7, cx = 9, cy = 9;
+      const rx = Math.abs(Math.cos(f * 2 * Math.PI)) * r;
+      ctx.clearRect(0, 0, 18, 18);
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(cx, cy, r, 0, 2 * Math.PI);
+      ctx.clip();
+      ctx.fillStyle = '#111118';
+      ctx.fillRect(cx - r - 1, cy - r - 1, 2*r+2, 2*r+2);
+      ctx.fillStyle = '#4ade80';
+      ctx.beginPath();
+      if (f < 0.5) {
+        ctx.arc(cx, cy, r, -Math.PI/2, Math.PI/2, false);
+        ctx.ellipse(cx, cy, rx, r, 0, Math.PI/2, -Math.PI/2, f > 0.25);
+      } else {
+        ctx.arc(cx, cy, r, Math.PI/2, -Math.PI/2, false);
+        ctx.ellipse(cx, cy, rx, r, 0, -Math.PI/2, Math.PI/2, f > 0.75);
+      }
+      ctx.fill();
+      ctx.restore();
+      ctx.beginPath();
+      ctx.arc(cx, cy, r, 0, 2 * Math.PI);
+      ctx.strokeStyle = 'rgba(74,222,128,0.3)';
+      ctx.lineWidth = 0.75;
+      ctx.stroke();
+    }
+
+    const fraction = getMoonFraction();
+    drawMoon(document.getElementById('moonCanvas'), fraction);
+    document.getElementById('moonPhase').textContent = moonName(fraction);
+
+    // ── GSAP ScrollTrigger entrance animations ──────────────────
+    gsap.registerPlugin(ScrollTrigger);
+
+    document.querySelectorAll('.option-section').forEach(section => {
+      const content = section.querySelector('.hero-content');
+      if (!content) return;
+      const badge  = content.querySelector('.badge');
+      const tag    = content.querySelector('.option-tag');
+      const h1     = content.querySelector('.hero-h1');
+      const sub    = content.querySelector('.hero-sub');
+      const cta    = content.querySelector('a');
+
+      const tl = gsap.timeline({
+        scrollTrigger: { trigger: section, start: 'top 70%', once: true }
+      });
+      if (badge) tl.from(badge, { opacity: 0, y: 14, duration: 0.4, ease: 'power2.out' });
+      if (tag)   tl.from(tag,   { opacity: 0, duration: 0.3 }, '-=0.1');
+      if (h1)    tl.from(h1,    { opacity: 0, y: 36, duration: 0.65, ease: 'power3.out' }, '-=0.15');
+      if (sub)   tl.from(sub,   { opacity: 0, y: 20, duration: 0.5,  ease: 'power2.out' }, '-=0.35');
+      if (cta)   tl.from(cta,   { opacity: 0, y: 12, duration: 0.4  }, '-=0.2');
+    });
+
+    // Focus section
+    gsap.from('.focus-section-head', {
+      scrollTrigger: { trigger: '.focus-items', start: 'top 80%', once: true },
+      opacity: 0, y: 20, duration: 0.5
+    });
+    document.querySelectorAll('.focus-row').forEach((row, i) => {
+      gsap.from(row, {
+        scrollTrigger: { trigger: row, start: 'top 85%', once: true },
+        opacity: 0, y: 16, duration: 0.5, delay: i * 0.08, ease: 'power2.out'
+      });
+    });
+  </script>
+</body>
+</html>
